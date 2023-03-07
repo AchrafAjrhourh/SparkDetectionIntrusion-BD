@@ -167,3 +167,75 @@ As I said before, in this project we will use DBFS or Databricks File System. To
 # Building the Schema:
 
 To build a schema for our datasets, there are two ways; either by defining a schema from scratch, or we can use pre-defined function that can do this job for us.
+
+### Defining Schema from Scratch:
+
+![alt text](https://github.com/AchrafAjrhourh/Spark-Detection-Intrusion/raw/master/Assets/Building%20the%20Schema.png)
+
+*Fig 11: Building the Schema using Scala as a programming Language Part I*
+
+![alt text](https://github.com/AchrafAjrhourh/Spark-Detection-Intrusion/raw/master/Assets/Building%20the%20Schema1.png)
+
+*Fig 12: Building the Schema using Scala as a programming Language Part II*
+
+![alt text](https://github.com/AchrafAjrhourh/Spark-Detection-Intrusion/raw/master/Assets/Print%20the%20Schema.png)
+
+*Fig 13: Print the Schema*
+
+![alt text](https://github.com/AchrafAjrhourh/Spark-Detection-Intrusion/raw/master/Assets/Overview%20of%20Table.png)
+
+*Fig 14: An Overview of the Table*
+
+### Building the Schema Using Pre-Defined Function:
+
+![alt text](https://github.com/AchrafAjrhourh/Spark-Detection-Intrusion/raw/master/Assets/Creating%20Training%20Set.png)
+
+*Fig 15: Creating the Training Set DataFrame*
+
+![alt text](https://github.com/AchrafAjrhourh/Spark-Detection-Intrusion/raw/master/Assets/Display%20Dataframe.png)
+
+*Fig16: Display the Dataframe*
+
+![alt text](https://github.com/AchrafAjrhourh/Spark-Detection-Intrusion/raw/master/Assets/Overview%20of%20Schema1.png)
+
+*Fig 17: An Overview of The Schema*
+
+# Confirm the various statistics of the dataset:
+### For Training:
+
+![alt text](https://github.com/AchrafAjrhourh/Spark-Detection-Intrusion/raw/master/Assets/Training.png)
+
+*Fig18: dataset statistics for the training set*
+
+### For Testing:
+
+![alt text](https://github.com/AchrafAjrhourh/Spark-Detection-Intrusion/raw/master/Assets/Testing.png)
+
+*Fig19: dataset statistics for the testing set*
+
+### Result:
+The above code can be summarized in the following table:
+
+**Category** | **Training Set** | **Testing Set**
+--- | --- | ---
+Normal | 56,000 | 37,000
+Analysis | 2,000 | 677
+Backdoor | 1,746 | 583
+DoS | 12,264 | 4,089
+Exploits | 33,393 | 11,132
+Generic | 40,000 | 18,871
+Reconnaissance | 10,491 | 3,496
+Shellcode | 1,133 | 378
+Worms | 130 | 44
+Total Records | 175,341 | 82,322
+
+# Computing the Gini Impurity:
+
+n this part, I will calculate the impurity for 5 features because they are the most likely to split our training set. However, the features are:
+
+* is_sm_ips_port
+* is_ftp_login
+* ct_ftp_cmd
+* Service
+* ct_state_ttl
+* proto
