@@ -1,5 +1,5 @@
 # Description
-A project using Spark for Intrusion Detection with a 2 feature decision tree algorithm based on network traffic features, utilizing the UNSW-NB15 dataset and databricks
+A project using Spark for Intrusion Detection with a 2 feature decision tree algorithm based on network traffic features, utilizing the UNSW-NB15 dataset and databricks.
 
 # Abstract:
 In this project we are interested in using Hive for Intrusion Detection using a simple 2 feature decision tree algorithm based on network traffic features. The project will be based on a research project that was done by Nour Moustafa and Jill Slay. During this project, I will use the UNSW-NB15 dataset which is free to use for academic purposes, and this is the case with my project.
