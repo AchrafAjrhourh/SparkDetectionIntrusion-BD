@@ -336,9 +336,94 @@ For a certain record in the dataset, we will see first the value of the ct_state
 
 *Fig23: An Example of how to Calculate Positive Predictions for Training Set*
 
-** NOTE: In the above image, I did not provide all the code for calculating the positive predictions. In fact, I showed only one example. The idea is to do the same for each split in the decision tree. **
+**NOTE: In the above image, I did not provide all the code for calculating the positive predictions. In fact, I showed only one example. The idea is to do the same for each split in the decision tree.**
 
-* Positive Predictions: 129,560
+* **Positive Predictions: 129,560**
+
+### Negative Predictions for Training Set:
+
+![alt text](https://github.com/AchrafAjrhourh/Spark-Detection-Intrusion/blob/master/Assets/Negative%20Predictions%20for%20Training%20Set.png?raw=true)
+
+*Fig24: An Example of how to Calculate Negative Predictions for Training Set*
+
+**NOTE: In the above image, I did not provide all the code for calculating the negative predictions. In fact, I showed only one example. The idea is to do the same for each split in the decision tree.**
+
+* **Negative Predictions: 45,796**
+
+### Confusion Matrix for Training Set:
+
+### *Code example of how to calculate True Positive and False Positive*:
+
+![alt text](https://github.com/AchrafAjrhourh/Spark-Detection-Intrusion/blob/master/Assets/Code%20example%20of%20how%20to%20calculate%20True%20Positive%20and%20False%20Positive.png?raw=true)
+
+*Fig25: An example of calculating True Positive and False Positive*
+
+**NOTE: In the above image, I did not provide all the code for calculating the true positive and false positive. In fact, I showed only one example. The idea is to do the same for each split in the decision tree.**
+
+* **True Positive: 118,076**
+* **False Positive: 11,484**
+
+### *Code example of how to calculate True Negative and False Negative*:
+
+![alt text](https://github.com/AchrafAjrhourh/Spark-Detection-Intrusion/blob/master/Assets/Code%20example%20of%20how%20to%20calculate%20True%20Negative%20and%20False%20Negative.png?raw=true)
+
+*Fig26: An example of calculating True Negative and False Negative*
+
+**NOTE: In the above image, I did not provide all the code for calculating the true negative and false negative. In fact, I showed only one example. The idea is to do the same for each split in the decision tree.**
+
+* **True Negative: 44,576**
+* **False Negative: 1,220**
+
+![alt text](https://github.com/AchrafAjrhourh/Hive-Detection-Intrusion/raw/master/Assets/Overall%20Table.png)
+
+* ***Training Accuracy: (TP + TN) / (TP+FN+TN+FP) = 0.92***
+
+### Predictions for Testing Using the Decision Tree Model:
+
+### Positive Predictions for Testing Set:
+
+![alt text](https://github.com/AchrafAjrhourh/Spark-Detection-Intrusion/blob/master/Assets/Positive%20predictions%20for%20testing%20set.png?raw=true)
+
+*Fig27: An example of how to calcule Positive Predictions for Testing Set*
+
+**NOTE: In the above image, I did not provide all the code for calculating the positive predictions. In fact, I showed only one example. The idea is to do the same for each split in the decision tree.**
+
+* **Positive Predictions: 60,507**
+
+### Negative Predictions for Testing Set:
+
+![alt text](https://github.com/AchrafAjrhourh/Spark-Detection-Intrusion/blob/master/Assets/Negative%20predictions%20for%20testing%20set.png?raw=true)
+
+*Fig28: An example of how to calcule Negative Predictions for Testing Set*
+
+* **Negative Predictions: 21,780**
+
+### Confusion Matrix for Testing Set:
+
+### *Code example of how to calculate True Positive and False Positive*:
+
+![alt text](https://github.com/AchrafAjrhourh/Spark-Detection-Intrusion/blob/master/Assets/Code%20example%20of%20how%20to%20calculate%20True%20Positive%20and%20False%20Positive.png?raw=true)
+
+*Fig29: An example of calculating True Positive and False Positive*
+
+**NOTE: In the above image, I did not provide all the code for calculating the true positive and false positive. In fact, I showed only one example. The idea is to do the same for each split in the decision tree.**
+
+* **True Positive: 44,954**
+* **False Positive: 15,533**
+
+### *Code example of how to calculate True Negative and False Negative*:
+
+![alt text](https://github.com/AchrafAjrhourh/Spark-Detection-Intrusion/blob/master/Assets/Code%20example%20of%20how%20to%20calculate%20True%20Negative%20and%20False%20Negative1.png?raw=true)
+
+*Fig30: An example of calculating True Negative and False Negative*
+
+* **True Negative: 21,447**
+* **False Negative: 333**
+
+![alt text](https://github.com/AchrafAjrhourh/Hive-Detection-Intrusion/raw/master/Assets/Overall%20Table%20T.png)
+
+* ***Testing Accuracy: (TP+TN)/(TP+TN+FN+FP) = 0.80***
+
 
 
 
