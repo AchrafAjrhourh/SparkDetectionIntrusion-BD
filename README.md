@@ -249,4 +249,96 @@ n this part, I will calculate the impurity for 5 features because they are the m
 *Fig21: Calculating Gini Impurity for every Feature*
 
 
+### The result of Gini impurity:
+
+
+* Total Gini for is_sm_ips_ports is **0.42**
+* Total Gini for service is **0.403**
+* Total Gini for ct_state_ttl is **0.158**
+* Total Gini for is_ftp_login is **0.435**
+* Total Gini for ct_ftp_cmd is **0.435**
+* Total Gini for proto is **0.352**
+
+As we can see from the above result the **Root Node is ct_state_ttl** because it has the best Gini impurity.
+
+## Computing Gini Impurity for the Next Best Feature to Choose:
+
+used the same process as I did in the previous question. In fact, I used the same functions. However, the following results is after computing Gini Impurity for each split in the Root Node:
+
+### The result of Gini impurity for Root Node ct_state_ttl = 0:
+
+* Total Gini for is_sm_ips_ports is **0.042**
+* Total Gini for service is **0.041**
+* Total Gini for is_ftp_login is **0.042**
+* Total Gini for ct_ftp_cmd is **0.042**
+* Total Gini for proto is **0.017**
+
+As we can see from the above result the **First Node is proto** because it has the best Gini impurity.
+
+### The result of Gini impurity for Root Node ct_state_ttl = 1:
+
+* Total Gini for is_sm_ips_ports is **0.291**
+* Total Gini for service is **0.270**
+* Total Gini for is_ftp_login is **0.290**
+* Total Gini for ct_ftp_cmd is **0.290**
+* Total Gini for proto is **0.291**
+
+As we can see from the above result the **Second Node is service** because it has the best Gini impurity.
+
+### The result of Gini impurity for Root Node ct_state_ttl = 2:
+
+* Total Gini for is_sm_ips_ports is **0.065**
+* Total Gini for service is **0.117**
+* Total Gini for is_ftp_login is **0.125**
+* Total Gini for ct_ftp_cmd is **0.125**
+* Total Gini for proto is **0.063**
+
+As we can see from the above result the **Third Node is proto** because it has the best Gini impurity.
+
+### The result of Gini impurity for Root Node ct_state_ttl = 3:
+
+* Total Gini for is_sm_ips_ports is **0.267**
+* Total Gini for service is **0.05**
+* Total Gini for is_ftp_login is **0.257**
+* Total Gini for ct_ftp_cmd is **0.257**
+* Total Gini for proto is **0.137**
+
+As we can see from the above result the **Fourth Node is service** because it has the best Gini impurity.
+
+### The result of Gini impurity for Root Node ct_state_ttl = 6:
+
+* Total Gini for is_sm_ips_ports is **0.494**
+* Total Gini for service is **0.441**
+* Total Gini for is_ftp_login is **0.495**
+* Total Gini for ct_ftp_cmd is **0.495**
+* Total Gini for proto is **0.009**
+
+As we can see from the above result the **Fifth Node is proto** because it has the best Gini impurity.
+
+
+### The Decision Tree Schema:
+
+![alt text](https://github.com/AchrafAjrhourh/Hive-Detection-Intrusion/raw/master/Assets/Decision%20Tree%20Schema.png)
+
+*Fig22: Decision Tree Schema After Computing Gini Impurity*
+
+### Example of How this Decision Tree works:
+
+For a certain record in the dataset, we will see first the value of the ct_state_ttl because it is the Root Node. Let's say, for example, ct_state_ttl = 0, then the second split will be in the level of the proto column. If the proto has as a value ‘sctp’, the prediction of the label will be 1. So, this is a simple example of how that decision tree works.
+
+## Predictions and Confusion Matrix:
+
+### Predictions that are produced by the Decision Tree Model for Training:
+
+### Positive Predictions for Training Set:
+
+![alt text](https://github.com/AchrafAjrhourh/Spark-Detection-Intrusion/blob/master/Assets/Positive%20Predictions%20for%20Training%20Set.png?raw=true)
+
+*Fig23: An Example of how to Calculate Positive Predictions for Training Set*
+
+** NOTE: In the above image, I did not provide all the code for calculating the positive predictions. In fact, I showed only one example. The idea is to do the same for each split in the decision tree. **
+
+* Positive Predictions: 129,560
+
+
 
