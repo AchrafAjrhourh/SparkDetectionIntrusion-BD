@@ -239,3 +239,14 @@ n this part, I will calculate the impurity for 5 features because they are the m
 * Service
 * ct_state_ttl
 * proto
+
+![alt text](https://github.com/AchrafAjrhourh/Spark-Detection-Intrusion/blob/master/Assets/Function%201.png)
+
+*Fig20: Function 1*
+
+![alt text](https://github.com/AchrafAjrhourh/Spark-Detection-Intrusion/blob/master/Assets/Gini%20Impurity%20for%20every%20Feature.png?raw=true)
+
+*Fig21: Calculating Gini Impurity for every Feature*
+
+
+
